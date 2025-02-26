@@ -47,7 +47,7 @@ st3 = st.container()
 
 
 with st3 , col2:
-   st.info('Completed By :- Bhoomika Sharma ')
+   st.info('Completed By :- Bhoomika Sharma , Sudhi Thakur , Sai Mugunth ')
    
 
   
