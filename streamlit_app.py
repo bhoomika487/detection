@@ -17,12 +17,13 @@ col1,col2 = st.columns(2)
 with st2:
  st.write("The first row lists features like ""'the'"", ""'to'"", ""'ect'"", etc., and each email row has counts of these words. The last column is ""'Prediction'"", which we assume is the class label (spam or not spam). The data seems to have word frequencies for each email.")    
  df = pd.read_csv("newlydataadded.csv")
- st.write(df.head(10))
+ st.write(df)
  check = st.checkbox("Click here to Train the Dataset with Naive Bayes CLassifiction Model ")
  but = st.button('submit', type='primary')
 
 
 if  check and but:
+    df = df.fillna(0)
     X = df.drop(['Email No.','Prediction'],axis=1)
     y = df['Prediction']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
